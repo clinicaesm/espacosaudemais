@@ -5,7 +5,7 @@ img,svg{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 button{font:inherit;background:none;border:none;cursor:pointer;color:inherit;}
 ul{list-style:none;}
-img{height:auto;}
+img{max-width:100%;height:auto;}
 
 /* ============ TOKENS (paleta real da logo) ============ */
 :root{
@@ -256,10 +256,10 @@ h2{font-size:clamp(1.85rem,1.3rem + 2.2vw,2.6rem);margin-bottom:16px;}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:10px;}
 
 /* ============ FLOATING CTA ============ */
-.float-cta{position:fixed;bottom:26px;right:26px;z-index:120;}
-.float-cta-btn{display:flex;align-items:center;gap:10px;background:var(--sinal);color:#fff;padding:14px 20px;border-radius:100px;box-shadow:0 12px 30px -8px rgba(184,65,62,.55);font-weight:600;font-size:.86rem;transition:transform .3s var(--ease);}
+.float-cta{position:fixed;bottom:26px;right:26px;z-index:120;max-width:calc(100vw - 32px);}
+.float-cta-btn{display:flex;align-items:center;gap:10px;background:var(--sinal);color:#fff;padding:14px 20px;border-radius:100px;box-shadow:0 12px 30px -8px rgba(184,65,62,.55);font-weight:600;font-size:.86rem;transition:transform .3s var(--ease);white-space:nowrap;}
 .float-cta-btn:hover{transform:translateY(-2px);}
-.float-cta-btn svg{width:17px;height:17px;stroke:#fff;}
+.float-cta-btn svg{width:17px;height:17px;stroke:#fff;flex-shrink:0;}
 .back-to-top{position:fixed;bottom:26px;left:26px;width:44px;height:44px;border-radius:50%;background:var(--papel);border:1px solid var(--linha);display:flex;align-items:center;justify-content:center;z-index:119;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .3s var(--ease);}
 .back-to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
 body.view-open .back-to-top,body.view-open .float-cta{opacity:0;visibility:hidden;}
@@ -336,6 +336,8 @@ body.view-open{overflow:hidden;}
   .footer-grid{grid-template-columns:1fr;}
   .back-to-top{left:16px;bottom:20px;}
   .float-cta{right:16px;bottom:20px;}
+  .float-cta-btn{padding:14px;border-radius:50%;gap:0;}
+  .float-cta-text{display:none;}
   .detail-topbar{padding:14px 18px;}
   .detail-body{padding:38px 0 80px;}
 }
