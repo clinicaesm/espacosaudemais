@@ -95,7 +95,7 @@ h2{font-size:clamp(1.85rem,1.3rem + 2.2vw,2.6rem);margin-bottom:16px;}
 /* ============ HERO ============ */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--tinta-deep);}
 .hero .container{width:100%;}
-.hero-photo{position:absolute;inset:0;background-image:url('assets/background/hero-familia-ilhas.jpg');background-size:cover;background-position:center 26%;background-repeat:no-repeat;}
+.hero-photo{position:absolute;inset:0;background-image:url('assets/background/hero-familia-ilhas.jpg?v=1787570526');background-size:cover;background-position:center 26%;background-repeat:no-repeat;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,18,32,.82) 0%,rgba(8,18,32,.6) 34%,rgba(8,18,32,.28) 58%,rgba(8,18,32,.05) 78%);}
 .hero-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,26,.55),transparent 40%);}
 @media (max-width:900px){
@@ -181,6 +181,7 @@ h2{font-size:clamp(1.85rem,1.3rem + 2.2vw,2.6rem);margin-bottom:16px;}
 .loc-row{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--linha);}
 .loc-row:first-of-type{border-top:none;}
 .loc-row svg{width:18px;height:18px;stroke:var(--neblina);flex-shrink:0;margin-top:2px;}
+.loc-row>div{flex:1;min-width:0;}
 .loc-row .label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--neblina);margin-bottom:3px;}
 .loc-row .val a{transition:color .3s;}
 .loc-row .val a:hover{color:var(--sinal);}
