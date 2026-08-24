@@ -8,13 +8,15 @@
   var progress = document.querySelector('.scroll-progress');
   var header = document.querySelector('.site-header');
   var backToTop = document.querySelector('.back-to-top');
-  window.addEventListener('scroll', function(){
+  function updateScrollState(){
     var h = document.documentElement;
     var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
     progress.style.width = scrolled + '%';
     header.classList.toggle('scrolled', h.scrollTop > 30);
     backToTop.classList.toggle('show', h.scrollTop > 700);
-  }, {passive:true});
+  }
+  window.addEventListener('scroll', updateScrollState, {passive:true});
+  updateScrollState(); // corre logo ao carregar — cobre o caso de a página abrir já com scroll (ex: link direto para uma secção)
   backToTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
 
   // ================= MOBILE MENU =================
