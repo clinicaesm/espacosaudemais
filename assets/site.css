@@ -1,6 +1,6 @@
 /* ============ RESET ============ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
 img,svg{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 button{font:inherit;background:none;border:none;cursor:pointer;color:inherit;}
@@ -158,7 +158,7 @@ h2{font-size:clamp(1.85rem,1.3rem + 2.2vw,2.6rem);margin-bottom:16px;}
   .specialty-streaming{padding:70px 18px;}
   .specialty-streaming__heading{grid-template-columns:1fr;gap:14px;}
   .specialty-streaming__rail{width:calc(100% + 36px);margin-left:-18px;padding:12px 18px 27px;gap:12px;}
-  .specialty-streaming__card{flex-basis:78vw;min-height:260px;}
+  .specialty-streaming__card{flex-basis:70vw;min-height:230px;}
   .specialty-streaming__card:hover{transform:none;}
 }
 @media (prefers-reduced-motion:reduce){.specialty-streaming *{transition-duration:.01ms!important;}}
@@ -327,6 +327,7 @@ body.view-open{overflow:hidden;}
   .mobile-nav{display:flex;}
   .why-grid{grid-template-columns:1fr;gap:40px;}
   .location-panels{grid-template-columns:1fr;}
+  .location-panel{padding:28px 22px;}
   .footer-grid{grid-template-columns:1fr 1fr;gap:30px;}
   .detail-columns{grid-template-columns:1fr;gap:34px;}
   .indicators-grid{grid-template-columns:1fr;}
@@ -409,7 +410,7 @@ body.view-open{overflow:hidden;}
 .gallery-card:hover .gallery-card__zoom,.gallery-card:focus-visible .gallery-card__zoom{opacity:1;}
 .gallery-card__zoom svg{width:13px;height:13px;stroke:#fff;}
 @media (prefers-reduced-motion:reduce){.gallery-card,.gallery-card img{transition-duration:.01ms;}}
-@media (max-width:760px){.gallery-card{flex-basis:78vw;}}
+@media (max-width:760px){.gallery-rail{width:calc(100% + 36px);margin-left:-18px;padding:12px 18px 27px;gap:12px;}.gallery-card{flex-basis:68vw;}}
 
 /* ============ EXAMES COMPLEMENTARES (faixa estilo streaming) ============ */
 .exam-rail{width:min(1320px,calc(100% + 40px));margin:0 auto;padding:6px 20px 30px;}
@@ -427,7 +428,7 @@ body.view-open{overflow:hidden;}
 .exam-card__block p{font-size:.87rem;line-height:1.55;color:var(--tinta);}
 .exam-card__source{display:inline-block;font-family:var(--font-mono);font-size:.7rem;color:var(--sinal);margin-top:4px;}
 .exam-card__source:hover{text-decoration:underline;}
-@media (max-width:760px){.exam-card{flex-basis:82vw;}}
+@media (max-width:760px){.exam-rail{width:calc(100% + 36px);margin-left:-18px;padding:12px 18px 27px;gap:12px;}.exam-card{flex-basis:72vw;}}
 
 /* ============ PÁGINA OFTALMOLOGIA — REFORMULAÇÃO ============ */
 .local-nav{position:sticky;top:64px;z-index:5;background:rgba(245,246,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha);}
@@ -500,4 +501,4 @@ body.view-open{overflow:hidden;}
 .article-card__meta{margin-top:auto;display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.72rem;color:var(--neblina);}
 .article-card__meta svg{width:13px;height:13px;stroke:var(--neblina);flex-shrink:0;}
 @media (prefers-reduced-motion:reduce){.article-card,.article-card__photo img,.article-card__underline{transition-duration:.01ms;}}
-@media (max-width:760px){.article-card{flex-basis:78vw;}}
+@media (max-width:760px){.article-rail{width:calc(100% + 36px);margin-left:-18px;padding:12px 18px 27px;gap:12px;}.article-card{flex-basis:68vw;}}
