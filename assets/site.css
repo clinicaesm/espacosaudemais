@@ -95,12 +95,12 @@ h2{font-size:clamp(1.85rem,1.3rem + 2.2vw,2.6rem);margin-bottom:16px;}
 /* ============ HERO ============ */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:var(--tinta-deep);}
 .hero .container{width:100%;}
-.hero-photo{position:absolute;inset:0;background-image:url('assets/background/hero-familia-ilhas.jpg?v=1787570526');background-size:cover;background-position:center 26%;background-repeat:no-repeat;}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 26%;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,18,32,.82) 0%,rgba(8,18,32,.6) 34%,rgba(8,18,32,.28) 58%,rgba(8,18,32,.05) 78%);}
 .hero-overlay::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,26,.55),transparent 40%);}
 @media (max-width:900px){
   .hero{min-height:100vh;}
-  .hero-photo{background-position:78% center;}
+  .hero-photo{object-position:78% center;}
   .hero-overlay{background:linear-gradient(180deg,rgba(8,18,32,.55) 0%,rgba(8,18,32,.72) 55%,rgba(8,18,32,.92) 100%);}
 }
 .hero-inner{position:relative;z-index:1;max-width:640px;padding:170px 0 90px;}
