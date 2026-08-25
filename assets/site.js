@@ -449,8 +449,8 @@
       examsSection.style.display = '';
       var examsRail = document.getElementById('specialist-exams');
       examsRail.innerHTML = d.exams.map(function(ex){
-        var locTags = '<span class="loc-tag">Praia — '+ex.price.praia+'</span>' +
-          (ex.price.mindelo ? '<span class="loc-tag">Mindelo — '+ex.price.mindelo+'</span>' : '<span class="loc-tag" style="opacity:.55;">Mindelo — não disponível</span>');
+        var locTags = '<span class="loc-tag">Praia</span>' +
+          (ex.price.mindelo ? '<span class="loc-tag">Mindelo</span>' : '<span class="loc-tag" style="opacity:.55;">Mindelo — não disponível</span>');
         return '<article class="exam-card">'+
           '<div class="exam-card__art"><img src="'+ex.photo+'" alt="'+ex.photoAlt+'" loading="lazy"></div>'+
           '<div class="exam-card__body">'+
